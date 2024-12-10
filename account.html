@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Tennis Academy: Account</title>
+    <link rel="stylesheet" href="css/Team1_AceTennisAcademy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <style>
+        .login{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: #D6D6D6;
+        }
+
+        .login h2{
+            padding-bottom: 2rem;
+            text-align: left;
+            padding-top: 16rem;
+        }
+
+        .form_input{
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .form_input label{
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #1F2831;
+            padding: 0 5px;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .form_input input{
+            width: 25vw;
+            height: 4rem;
+            font-size: 20px;
+            color: #1F2831;
+            padding: 0 10px;
+            background: transparent;
+            border: 2px solid #1F2831;
+            outline: none;
+            border-radius: 10px;
+        }
+
+        .form_input input:focus~label,
+        .form_input input:valid~label {
+            top: 0;
+            font-size: 16px;
+            background: #D6D6D6;
+        }
+
+        
+        .signup{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: #CEE865;
+        }
+
+        .signup h2{
+            padding-bottom: 2rem;
+            text-align: left;
+            padding-top: 16rem;
+        }
+
+        .signup .form_input input:focus~label,
+        .signup .form_input input:valid~label {
+            top: 0;
+            font-size: 16px;
+            background: #CEE865;
+        }
+
+        .form_button{
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-align: center;
+            background-color: #1F2831;
+            padding: 15px 45px;
+            width: 25vw;
+            text-decoration: none;
+            cursor: pointer;
+            align-self: center;
+            border-radius: 50px;
+            margin-top: 1rem;
+        }
+
+        .signup p{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18px;
+            color: #1F2831;
+            width: 20vw;
+            padding-top: 1rem;
+        }
+
+        .login p{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18px;
+            color: #1F2831;
+            width: 20vw;
+            text-align: right;
+            padding-top: 1rem;
+        }
+
+        .login a{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18px;
+            color: #1F2831;
+            width: 20vw;
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .login a:link{
+            text-decoration: none;
+        }
+
+        .login a:hover{
+            font-weight: 700;
+        }
+
+
+       @media(max-width: 430px){
+        header{
+                background-color: #6B6B6B;
+                display: block;
+                transition: top 0.3s;
+                z-index: 1;
+            }
+
+            .heading{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 60vh 45vh;
+            } 
+
+            .login{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: column;
+                background-color: #D6D6D6;
+            }
+
+            .login h2{
+                padding-bottom: 1rem;
+                text-align: left;
+                padding-top: 3rem;
+            }
+
+            .form_input{
+                position: relative;
+                margin: 5px 0;
+            }
+
+            .form_input label{
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                font-size: 18px;
+                color: #1F2831;
+                padding: 0 5px;
+                pointer-events: none;
+                transition: 0.5s;
+            }
+
+            .form_input input{
+                width: 75vw;
+                height: 3rem;
+                font-size: 18px;
+                color: #1F2831;
+                padding: 0 10px;
+                background: transparent;
+                border: 2px solid #1F2831;
+                outline: none;
+                border-radius: 10px;
+            }
+
+            .form_input input:focus~label,
+            .form_input input:valid~label {
+                top: 0;
+                font-size: 14px;
+                background: #D6D6D6;
+            }
+
+            
+            .signup{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: column;
+                background-color: #CEE865;
+                padding-bottom: 3rem;
+            }
+
+            .signup h2{
+                padding-bottom: 1rem;
+                text-align: left;
+                padding-top: 8rem;
+            }
+
+            .signup .form_input input:focus~label,
+            .signup .form_input input:valid~label {
+                top: 0;
+                font-size: 16px;
+                background: #CEE865;
+            }
+
+            .form_button{
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                text-align: center;
+                background-color: #1F2831;
+                padding: 15px 45px;
+                width: 75vw;
+                text-decoration: none;
+                cursor: pointer;
+                align-self: center;
+                border-radius: 50px;
+                margin-top:.5rem;
+            }
+
+            .signup p{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 18px;
+                color: #1F2831;
+                width: 65vw;
+                padding-top: 1rem;
+            }
+
+            .login p{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 18px;
+                color: #1F2831;
+                width: 65vw;
+                text-align: right;
+                padding-top: .5rem;
+            }
+
+
+       }
+        
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <a href="index.html">
+                <img src="img/Desktop_logo.svg" id="logo_desktop" alt="ATA_Logo">
+            </a>
+            <a href="index.html">
+                <img src="img/Mobile_logo.svg" id="logo_mobile" alt="ATA_Logo">
+            </a>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar(); style="margin-top: 5em;"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M480-438 270-228q-9 9-21 9t-21-9q-9-9-9-21t9-21l210-210-210-210q-9-9-9-21t9-21q9-9 21-9t21 9l210 210 210-210q9-9 21-9t21 9q9 9 9 21t-9 21L522-480l210 210q9 9 9 21t-9 21q-9 9-21 9t-21-9L480-438Z"/></svg></a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="classes.html">CLASSES</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li style="padding-top: 30px;"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag" style="margin-right: 4px;"></a></li>
+                    <li style="padding-top: 50px;"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                </ul>
+                <ul class="mobilenav">
+                    <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+                    <li class="hideOnMobile"><a href="classes.html">CLASSES</a></li>
+                    <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+                    <li class="hideOnMobile"><a href="news.html">NEWS</a></li>
+                    <li class="hideOnMobile"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag"></a></li>
+                    <li class="hideOnMobile"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M150-240q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Z"/></svg></a></li>
+                </ul>
+            </nav>
+            
+            <script>
+                function showSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'flex'
+                }
+
+                function hideSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'none'
+                }
+            </script>
+
+            <script>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-150px";
+                }
+                prevScrollpos = currentScrollPos;
+                }
+            </script>
+
+            
+
+        </header>
+        <div class="heading">
+            <div class="signup"> 
+                <h2>Not a<br>Member?</h2>
+                <div class="form_input">
+                    <input type="text" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="form_input">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="form_button" style="color: #CCFF00;">Create Account</div>
+                <p>By clicking <b>Create Account</b>, you are indicating that you have read and agree to the Terms of Use and Privacy Policy.</p><br>
+            </div>
+            <div class="login">
+                <h2>Welcome<br>Back!</h2>
+                <div class="form_input">
+                    <input type="text" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="form_input">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="form_button" style="color: #D6D6D6;">Log-in Account</div>
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+
+        <footer>
+            <div id="contact">
+                <p class="phone">CALL 408.564.6282</p>
+                <p class="address">223 Volley Way, Santa Clara, CA 95054</p>
+            </div>
+            <div id="connect">
+                    <a href="#" class="social">
+                    <img src="img/Icon_IG.svg" alt="IG"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_FB.svg" alt="FB"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_Email.svg" alt="Email"></a>
+            </div>
+            <div id="copyright">&copy;2015-2024 Ace Tennis Academy</div>
+        </footer>
+    </div>
+</body>
+</html>

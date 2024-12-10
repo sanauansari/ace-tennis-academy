@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Tennis Academy: Home</title>
+    <link rel="stylesheet" href="css/Team1_AceTennisAcademy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <style>
+        header{
+            box-sizing: border-box;
+            height: 120px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            position: fixed;
+            background-color: rgba(31, 40, 49, .5);
+            display: block;
+            transition: top 0.3s;
+            z-index: 1;
+        }
+
+        .hero{
+            background-image: url(img/Desktop_home_hero.jpg);
+            min-height: 100vh; 
+            background-attachment:scroll;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .hero img{
+            width: 100%;
+            height: auto;
+        }
+
+        .hero_text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-bottom: 15vh;
+        }
+
+        .hero_title{
+            font-size: 100px;
+            line-height: 100px;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .hero_text p{
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 7px;
+            color: #ffffff;
+            padding-top: 1vh;
+            padding-bottom: 6vh;
+        }
+
+        .intro{
+            background-color: #1F2831;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .intro img{
+            height: 75vh;
+            width: auto;
+            padding-top: 6rem;
+        }
+
+        .intro_text{
+            font-size: 25px;
+            line-height: 35px;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #CCFF00;
+            width: 80vw;
+            padding-top: 3rem;
+            padding-bottom: 6rem;
+        }
+
+        .button_action:hover{
+            color: #CCFF00;
+            background-color: #1F2831;
+        }
+
+        .we_offer{
+            background-color: #CEE865; /*#D6E49E;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10rem;
+        }
+
+        .we_offer h2{
+            text-align: center;
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+        }
+
+        .offer_content{
+            width: 70vw;
+            display: grid;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: 1fr 1fr;
+            gap: 100px;
+            justify-content: center;
+        }
+
+        .offer_item{
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        .offer_text{
+            display: flex;
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+
+        .offer_item_list li{
+            list-style: none;
+            list-style-image: none;
+            background: url(img/Desktop_home_check.svg) no-repeat 0 0.3em;
+            background-size: 1em;
+            padding-left: 1.5em;
+            color: #1F2831;
+            font-size: 20px;
+            line-height: 25px;
+            padding-bottom: 1em;
+        }
+
+        .offer_item_list{
+            padding-top: 1.5em;
+        }
+
+        .we_nurture{
+            background-color: #6B6B6B;   
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+        }
+
+        .we_nurture h2{
+            color: #CCFF00;
+            text-align: center;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+        }
+
+        .nurture_content{
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            justify-content: center;
+            gap: 1em;
+            padding-bottom: 10rem;
+        }
+
+        .nurture_item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            background-color: rgba(255, 255, 255, .2);
+            padding: 4em 2em 3em 2em;
+            border-radius: 25px;
+        }
+
+        .nurture_text{
+            display: grid;
+            grid-template-columns: 1fr 60% 1fr;
+            gap: 20px;
+            padding-top: 2em;
+        }
+
+        .quote p{
+            font-family: "Kite One", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        .nurture_item img{
+            width: 75%;
+            height: auto;
+            outline: 2px solid #ffffff;
+            align-self: center;
+            outline-offset: -2px;
+            border-radius: 50%;
+        }
+
+        .nurture_text img{
+            width: 100%;
+            height: auto;
+            outline: none;
+            border-radius: 0;
+        }
+
+        .quote_bottom{
+            background-image: url(img/Desktop_home_quote_bottom.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom;
+        }
+
+        .quote_name{
+            text-align: right;
+            padding-top: 1em;
+        }
+
+        .quote_top{
+            background-image: url(img/Desktop_home_quote_top.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+    
+
+       @media(max-width: 430px){
+            header{
+                box-sizing: border-box;
+                height: 100px;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                position: fixed;
+                background-color: #1F2831;
+                display: block;
+                transition: top 0.3s;
+                z-index: 1;
+            }
+
+            .hero{
+                background-image: url(img/Mobile_home_hero.jpg);
+                height: 100vh; 
+                background-attachment: scroll;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom center;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+
+            .hero img{
+                width: 100%;
+                height: auto;
+            }
+
+            .hero_text{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding-bottom: 12vh;
+            }
+
+            .hero_title{
+                font-size: 40px;
+                line-height: 40px;
+                font-weight: 700;
+                color: #ffffff;
+                text-align: center;
+            }
+
+            .hero_text p{
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+                color: #ffffff;
+                padding-top: 1vh;
+                padding-bottom: 4vh;
+                text-align: center;
+            }
+
+            .intro img{
+                width: 80vw;
+                height: auto;
+                padding-top: 15rem;
+            }
+
+            .intro_text{
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: 1px;
+                text-align: center;
+                color: #CCFF00;
+                width: 80vw;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .we_offer{
+                background-color: #CEE865;/*#D6E49E;*/
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 5rem;
+            }
+
+            .we_offer h2{
+                text-align: center;
+                padding-top: 6rem;
+                padding-bottom: 3rem;
+            }
+
+            .offer_content{
+                width: 75vw;
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                justify-content: center;
+            }
+
+            .offer_item{
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+            }
+
+            .offer_text{
+                display: flex;
+                flex-direction: column;
+                padding-top: 1rem;
+            }
+
+            .offer_item_list li{
+                list-style: none;
+                list-style-image: none;
+                background: url(img/Desktop_home_check.svg) no-repeat 0 0.3em;
+                background-size: 1em;
+                padding-left: 1.5em;
+                color: #1F2831;
+                font-size: 18px;
+                line-height: 20px;
+                padding-bottom: 1em;
+            }
+
+            .offer_item_list{
+                padding-top: 1.5em;
+            }
+
+            
+            .we_nurture{
+                background-color: #6B6B6B;   
+                display: flex;
+                flex-direction: column; 
+                align-items: center;
+            }
+
+            .we_nurture h2{
+                color: #CCFF00;
+                text-align: center;
+                padding-top: 6rem;
+                padding-bottom: 4rem;
+            }
+
+            .nurture_content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1em;
+                padding-bottom: 4rem;
+            }
+
+            .nurture_item{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                background-color: rgba(255, 255, 255, .2);
+                padding: 4em 1em 3em 1em;
+                border-radius: 25px;
+            }
+
+            .nurture_text{
+                width: 75vw;
+                display: grid;
+                grid-template-columns: 1fr 60% 1fr;
+                gap: 15px;
+                padding-top: 2em;
+            }
+
+            .quote p{
+                font-family: Kite One;
+                font-size: 16px;
+                color: #ffffff;
+            }
+
+            .nurture_item img{
+                width: 60%;
+                height: auto;
+                outline: 2px solid #ffffff;
+                align-self: center;
+                outline-offset: -2px;
+                border-radius: 50%;
+            }
+
+            .nurture_text img{
+                width: 100%;
+                height: auto;
+                outline: none;
+                border-radius: 0;
+            }
+
+            .quote_bottom{
+                background-image: url(img/Mobile_home_quote_bottom.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: bottom;
+            }
+
+            .quote_name{
+                text-align: right;
+                padding-top: 1em;
+            }
+
+            .quote_top{
+                background-image: url(img/Mobile_home_quote_top.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+       }
+        
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <a href="index.html">
+                <img src="img/Desktop_logo.svg" id="logo_desktop" alt="ATA_Logo">
+            </a>
+            <a href="index.html">
+                <img src="img/Mobile_logo.svg" id="logo_mobile" alt="ATA_Logo">
+            </a>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar(); style="margin-top: 5em;"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M480-438 270-228q-9 9-21 9t-21-9q-9-9-9-21t9-21l210-210-210-210q-9-9-9-21t9-21q9-9 21-9t21 9l210 210 210-210q9-9 21-9t21 9q9 9 9 21t-9 21L522-480l210 210q9 9 9 21t-9 21q-9 9-21 9t-21-9L480-438Z"/></svg></a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="classes.html">CLASSES</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li style="padding-top: 30px;"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag" style="margin-right: 4px;"></a></li>
+                    <li style="padding-top: 50px;"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                </ul>
+                <ul class="mobilenav">
+                    <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+                    <li class="hideOnMobile"><a href="classes.html">CLASSES</a></li>
+                    <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+                    <li class="hideOnMobile"><a href="news.html">NEWS</a></li>
+                    <li class="hideOnMobile"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag"></a></li>
+                    <li class="hideOnMobile"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M150-240q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Z"/></svg></a></li>
+                </ul>
+            </nav>
+            
+            <script>
+                function showSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'flex'
+                }
+
+                function hideSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'none'
+                }
+            </script>
+
+            <script>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-150px";
+                }
+                prevScrollpos = currentScrollPos;
+                }
+            </script>
+
+            
+
+        </header>
+        <div class="hero">
+            <div class="hero_text"> 
+                <div class="hero_title">SERVE YOUR BEST<br>ACE YOUR GAME</div>
+                <p>Your Journey to Tennis Mastery Starts Here</p>
+                <a href="classes.html" class="button_action">Book Your Class Now!</a>
+            </div>
+        </div>
+
+        <div class="intro">
+            <img src="img/Desktop_home_logo_background.svg">
+            <div class="intro_text">
+                Ready to take your tennis game to new heights? 
+                Ace Academy offers personalized coaching and a supportive learning environment.
+                We'll help you set and achieve your goals, step by step. 
+                Let's work together to make your tennis dreams a reality.
+            </div>
+        </div>
+
+        <div class="we_offer">
+            <h2>We Offer:</h2>
+            <div class="offer_content">
+                <div class="offer_item">
+                    <img src="img/Desktop_home_icon_coach.svg" alt="Coach icon">
+                    <div class="offer_text">
+                        <h3>COACHING<br>EXCELLENCE</h3>
+                        <ul class="offer_item_list">
+                            <li>Personalized instruction tailored to your specific goals</li>
+                            <li>Experienced coaches with a proven track record of success</li>
+                            <li>Technical refinement, strategic development, and mental game coaching</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="offer_item">   
+                    <img src="img/Desktop_home_icon_classes.svg" alt="Tennis racket and ball icon">
+                    <div class="offer_text">
+                        <h3>ALL-LEVEL<br>CLASSES</h3>
+                        <ul class="offer_item_list">
+                            <li>Beginner, intermediate, and advanced group classes</li>
+                            <li>Junior development programs, adult clinics and private lessons</li>
+                            <li>Specialty programs like cardio tennis and match play</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="offer_item">   
+                    <img src="img/Desktop_home_icon_schedule.svg" alt="Calendar icon">
+                    <div class="offer_text">
+                    <h3>FLEXIBLE<br>SCHEDULING</h3>
+                    <ul class="offer_item_list">
+                        <li>Morning, afternoon, and evening classes</li>
+                        <li>Weekend programs and Summer Camps available</li>
+                        <li>Flexible online scheduling to suit busy lifestyles and personal pace</li>
+                    </ul>
+                    </div>
+                </div>   
+                <div class="offer_item"> 
+                    <img src="img/Desktop_home_icon_facility.svg" alt="Tennis court icon">
+                    <div class="offer_text">
+                        <h3>TOP-NOTCH<br>FACILTIES</h3>
+                        <ul class="offer_item_list">
+                            <li>Access to a variety of high-quality and well-maintained tennis courts</li>
+                            <li>Experience playing on different surfaces, including hard court, clay and grass simulations</li>
+                            <li>Technical refinement, strategic Optimal playing conditions year-round</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="we_nurture">
+            <h2>and Yes, we nurture:</h2>
+            <div class="nurture_content">
+                <div class="nurture_item">
+                    <img src="img/Desktop_home_photo_ethan.png">
+                    <div class="nurture_text">
+                        <div class="quote_top"></div>
+                        <div class="quote">
+                            <p>Their unwavering support and expert coaching pushed me to limits I never knew I had. I'll forever be grateful for this journey.</p>
+                            <p class="quote_name">— Ethan</p>
+                        </div>
+                        <div class="quote_bottom"></div>
+                    </div>
+                </div>
+
+                <div class="nurture_item">
+                    <img src="img/Desktop_home_photo_anya.png">
+                    <div class="nurture_text">
+                        <div class="quote_top"></div>
+                        <div class="quote">
+                            <p>Ace Academy helped me transform from a one-dimensional player to a well-rounded competitor.</p>
+                            <p class="quote_name">— Anya</p>
+                        </div>
+                        <div class="quote_bottom"></div>
+                    </div>
+                </div>
+
+                <div class="nurture_item">
+                    <img src="img/Desktop_home_photo_jacob.png">
+                    <div class="nurture_text">
+                        <div class="quote_top"></div>
+                        <div class="quote">
+                            <p>Ace Academy have really upped my game. My coach pushes me to be my best and I'm seeing real results on the court.</p>
+                            <p class="quote_name">— Jacob</p>
+                        </div>
+                        <div class="quote_bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="contact">
+                <p class="phone">CALL 408.564.6282</p>
+                <p class="address">223 Volley Way, Santa Clara, CA 95054</p>
+            </div>
+            <div id="connect">
+                    <a href="#" class="social">
+                    <img src="img/Icon_IG.svg" alt="IG"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_FB.svg" alt="FB"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_Email.svg" alt="Email"></a>
+            </div>
+            <div id="copyright">&copy;2015-2024 Ace Tennis Academy</div>
+        </footer>
+    </div>
+</body>
+</html>

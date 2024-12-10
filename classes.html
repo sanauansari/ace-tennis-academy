@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Tennis Academy: Classes</title>
+    <link rel="stylesheet" href="css/Team1_AceTennisAcademy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <style>
+        .heading_image{
+            background-image: url(img/Desktop_classes_hero.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            margin-top: 45px;
+            background-size: cover;
+        }
+
+        .programs{
+            background-color: #d6d6d6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15rem;
+            padding-top: 6rem;
+        }
+
+        .programs h2{
+            padding-top: 8rem;
+            padding-bottom: 6rem;;
+        }
+
+        .program_items{
+            display: flex;
+            flex-direction: column;
+            width: 75vw;
+            gap: 6rem;
+        }
+
+        .program_info{
+            display: grid;
+            grid-template-columns: 45% 45%;
+            justify-content: center;
+            align-items:end;
+            column-gap: 3rem;
+        }
+
+        .program_info:nth-child(even){
+            column-gap: 0;
+        }
+
+        .program_info:nth-child(even) p{
+            padding-right: 1rem;
+        }
+
+        .program_info img{
+            width: 100%;
+            height: auto;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+        }
+
+        .program_text h3{
+            text-align: left;
+            padding-bottom: 2rem;
+        }
+
+        .program_text h4{
+            line-height: 35px;
+            padding-top: 1rem;
+        }
+
+        .program_text p{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #1F2831;
+        }
+
+        .program_text hr{
+            margin-top: 3rem;
+            color: #1F2831;
+            border-top: 2px solid #1F2831;
+        }
+
+        .plan_pricing{
+            background-color: #1F2831;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15rem;
+            padding-top: 6rem;
+        }
+
+        .plan_pricing h2{
+            color: #CCFF00;
+            padding-top: 8rem;
+            padding-bottom: 4rem;;
+        }
+
+        .plan{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            justify-content: center;
+            column-gap: 3rem;
+            row-gap: 4rem;
+            padding: 45px 0 45px 0;
+        }
+        
+        .plan_card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            outline: 1.5px solid #ffffff;
+            border-radius: 20px;
+            width: 270px;
+            height: 360px;
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        .card_title{
+            font-size: 1.75em;
+            font-weight: 600;
+            letter-spacing: .05em;
+            text-align: center;
+            color: #1F2831;
+            background-color: #ffffff;
+            border-radius: 20px 20px 0 0;
+            padding: 12px 0;
+            width: 270px;
+            height: 60px;
+            margin-bottom: 0;
+        }
+
+        .plan_price{
+            font-family: "Playfair", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-size: 90px;
+            font-weight: 500;
+            margin: 0;
+            color: #CCFF00;
+            text-align: center;
+        }
+
+        sup{
+            font-family: "Playfair", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-size: 45px;
+            color: #CCFF00;
+        }
+
+        .plan_details{
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+            letter-spacing: 1px;
+            line-height: 25px;
+            margin-bottom: 35px;
+        }
+
+        .add_button{
+            box-sizing: border-box;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 30px;
+            border-radius: 50px;
+            border: none;
+            color: #1F2831;
+            background-color: #CCFF00;
+        }
+
+        .add_button:link{
+            text-decoration: none;
+        }
+
+        .add_button:hover{
+            color: #CCFF00;
+            background-color: #1F2831;
+            border: 1.5px solid #CCFF00;
+        }
+
+        .schedule{
+            background-color: #CEE865;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15rem;
+            padding-top: 12rem;
+        }
+
+        .plan_pricing h2{
+            color: #CCFF00;
+            padding-top: 8rem;
+            padding-bottom: 4rem;;
+        }
+        
+        .schedule{
+            background-color: #CEE865;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15rem;
+            padding-top: 12rem;
+        }
+
+        .scedule h2{
+            color: #1F2831;
+        }
+
+        .schedule_table{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 6rem;
+        }
+
+        .accordion{
+            background-color: #CEE865;
+            color: #1F2831;
+            cursor: pointer;
+            padding: 18px;
+            width: 75%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 150px;
+            line-height: 200px;
+            font-weight: 300;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            color: #ffffff;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #1F2831;
+            font-size: 200px;
+            line-height: 225px;
+            font-weight: 200;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+            color: #ffffff;
+            font-size: 250px;
+            line-height: 225px;
+            font-weight: 200;
+        }
+
+        .panel{
+            padding: 0 18px;
+            background-color: #CEE865;
+            max-height: 0;
+            width: 75%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 6rem;
+            gap: 4rem;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .panel P{
+            font-size: 25px;
+            font-weight: 500;
+            padding-bottom: 3rem;
+            color: #1F2831;
+        }
+
+        .accordion{
+            border-top: 2px solid #1F2831;
+        }
+
+        .button_action{
+            background-color: #1F2831; 
+            color: #CCFF00; 
+            margin-top: 12rem;
+        }
+
+       @media(max-width: 430px){
+        header{
+            background-color: #6B6B6B;
+            display: block;
+            transition: top 0.3s;
+            z-index: 1;
+        }
+    
+        .heading_image{
+            background-image: url(img/Mobile_classes_hero.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            margin-top: 100px;
+            background-size: cover;
+        }
+
+        .programs{
+            background-color: #d6d6d6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom:6rem;
+            padding-top: 0rem;
+        }
+
+        .programs h2{
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .program_items{
+            display: flex;
+            flex-direction: column;
+            width: 75vw;
+            gap: 3rem;
+        }
+
+        .program_info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:end;
+            column-gap: 3rem;
+        }
+
+        .program_info:nth-child(even){
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .program_info img{
+            width: 100%;
+            height: auto;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+        }
+
+        .program_text h3{
+            text-align: center;
+            padding-bottom: 0rem;
+            padding-top: 2rem;
+            font-size: 35px;
+            line-height: 35px;
+        }
+
+        .plan_pricing{
+            padding-top: 3rem;
+            padding-bottom: 3rem
+        }
+
+        .plan_pricing h2{
+            padding-top: 2rem;
+            padding-bottom: 0rem;
+        }
+
+        .plan{
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            padding: 45px 0 45px 0;
+        }
+
+        .schedule{
+            background-color: #CEE865;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 6rem;
+            padding-top: 6rem;
+        }
+
+        .schedule_table{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 3rem;
+        }
+
+        .accordion{
+            background-color: #CEE865;
+            color: #1F2831;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 40px;
+            line-height:60px;
+            font-weight: 500;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            color: #ffffff;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #1F2831;
+            font-size: 75px;
+            line-height: 60px;
+            font-weight: 300;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+            color: #ffffff;
+            font-size: 80px;
+            line-height: 60px;
+            font-weight: 300;
+        }
+
+        .panel{
+            padding: 0 18px;
+            background-color: #CEE865;
+            max-height: 0;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+            gap: 0rem;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .panel P{
+            font-size: 25px;
+            font-weight: 500;
+            padding-bottom: 0rem;
+            color: #1F2831;
+        }
+
+        .accordion{
+            border-top: 2px solid #1F2831;
+        }
+
+        .button_action{
+            background-color: #1F2831; 
+            color: #CCFF00; 
+            margin-top: 6rem;
+        }
+
+
+       }
+        
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <a href="index.html">
+                <img src="img/Desktop_logo.svg" id="logo_desktop" alt="ATA_Logo">
+            </a>
+            <a href="index.html">
+                <img src="img/Mobile_logo.svg" id="logo_mobile" alt="ATA_Logo">
+            </a>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar(); style="margin-top: 5em;"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M480-438 270-228q-9 9-21 9t-21-9q-9-9-9-21t9-21l210-210-210-210q-9-9-9-21t9-21q9-9 21-9t21 9l210 210 210-210q9-9 21-9t21 9q9 9 9 21t-9 21L522-480l210 210q9 9 9 21t-9 21q-9 9-21 9t-21-9L480-438Z"/></svg></a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="classes.html">CLASSES</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li style="padding-top: 30px;"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag" style="margin-right: 4px;"></a></li>
+                    <li style="padding-top: 50px;"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                </ul>
+                <ul class="mobilenav">
+                    <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+                    <li class="hideOnMobile"><a href="classes.html">CLASSES</a></li>
+                    <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+                    <li class="hideOnMobile"><a href="news.html">NEWS</a></li>
+                    <li class="hideOnMobile"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag"></a></li>
+                    <li class="hideOnMobile"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M150-240q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Z"/></svg></a></li>
+                </ul>
+            </nav>
+            
+            <script>
+                function showSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'flex'
+                }
+
+                function hideSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'none'
+                }
+            </script>
+
+            <script>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-150px";
+                }
+                prevScrollpos = currentScrollPos;
+                }
+            </script>
+
+            
+
+        </header>
+        <div class="heading">
+            <div class="heading_image"></div>
+            <div class="heading_text"> 
+                <h1>CLASSES</h1>
+                <p>
+                    Whether you're a budding tennis star or a seasoned player looking to refine your skills, Ace Tennis Academy offers a range of programs to suit your needs. Our expert coaches are dedicated to helping you reach your full potential, no matter your age or skill level.
+                    <br>
+                    <br>
+                    From our comprehensive junior programs to our personalized adult coaching, students are empowered to reach their full potential. We offer a wide range of options to suit your individual needs. Join us and discover the joy of tennis. 
+                </p>
+            </div>
+        </div>
+
+<!-- add code in the empty space here -->  
+        <div class="programs">
+            <h2>Ace Clinic Programs</h2>
+            <div class="program_items">
+                <div class="program_info">
+                    <img src="img/Desktop_classes_photo_junior.png" alt="Junior Program">
+                    <div class="program_text">
+                        <h3>JUNIOR<br>PROGRAMS</h3>
+                        <h4>Beginner</h4>
+                        <p>Learn the fundamentals of tennis, including grip, stance, and basic strokes.</p>
+                        <h4>Intermediate</h4>
+                        <p>Refine your technique, develop consistency, and start learning strategy.</p>
+                        <h4>Advanced</h4>
+                        <p>Take your game to the next level with advanced drills, match play, and mental toughness training.</p>
+                        <hr> 
+                    </div>
+                </div>
+                <div class="program_info">
+                    <div class="program_text">
+                        <h3>ADULT<br>PROGRAMS</h3>
+                        <h4>Beginner</h4>
+                        <p>Learn the basics and develop a solid foundation for future improvement.</p>
+                        <h4>Intermediate</h4>
+                        <p>Refine your technique, improve your consistency, and develop tactical awareness.</p>
+                        <h4>Advanced</h4>
+                        <p>Focus on match play, tournament preparation, and high-performance training.</p>
+                        <hr> 
+                    </div>
+                    <img src="img/Desktop_classes_photo_adult.png" alt="Adult Program">
+                </div>
+                <div class="program_info">
+                    <img src="img/Desktop_classes_photo_private.png" alt="Private Lessons">
+                    <div class="program_text">
+                        <h3>CUSTOMIZED<br>PRIVATE LESSONS</h3>
+                        <h4>Tailored Instruction</h4>
+                        <p>Personalized coaching to address your specific needs and goals.<p>
+                        <h4>Flexible Scheduling</h4>
+                        <p>Accommodate busy lifestyles with flexible scheduling options.</p>
+                        <h4>Rapid Improvement</h4>
+                        <p>Focus on your weak areas and strengthen your strengths.</p>
+                        <hr> 
+                    </div>
+                </div>
+                <div class="program_info">
+                    <div class="program_text">
+                        <h3>SUMMER &<br>WINTER CAMPS</h3>
+                        <h4>Intensive Training</h4>
+                        <p>Full-day camps with a focus on skill development, match play, and fitness.</p>
+                        <h4>Fun Activities</h4>
+                        <p>Engaging drills, games, and competitions to make learning enjoyable.</p>
+                        <h4>Expert Coaching</h4>
+                        <p>Experienced coaches to guide and motivate you.</p>
+                        <hr> 
+                    </div>
+                    <img src="img/Desktop_classes_photo_camp.png" alt="Junior Program">
+                </div>
+                  
+            </div>
+        </div>
+
+        <div class="plan_pricing">
+            <h2>Plan & Pricing</h2>
+            <div class="plan">
+                <div class="plan_card">
+                    <div class="card_title">JUNIOR CLASS</div>
+                    <p class="plan_price"><sup>$</sup>240</p>
+                    <p class="plan_details">6 Classes Package<br>3-5 People/Group<br>Valid for 3 Months</p>
+                    <a href="checkout.html" class="add_button">Add to Bag</a>
+                </div>
+
+                <div class="plan_card">
+                    <div class="card_title">JUNIOR CLASS</div>
+                    <p class="plan_price"><sup>$</sup>320</p>
+                    <p class="plan_details">8 Classes Package<br>3-5 People/Group<br>Valid for 3 Months</p>
+                    <a href="checkout.html" class="add_button">Add to Bag</a>
+                </div>
+
+                <div class="plan_card">
+                    <div class="card_title">JUNIOR CLASS</div>
+                    <p class="plan_price"><sup>$</sup>75</p>
+                    <p class="plan_details">Single Class Package<br>1 on 1 Customized Class<br>By
+                        Appointment Only</p>
+                        <a href="checkout.html" class="add_button">Add to Bag</a>
+                </div>
+
+                <div class="plan_card">
+                    <div class="card_title">ADULT CLASS</div>
+                    <p class="plan_price"><sup>$</sup>390</p>
+                    <p class="plan_details">6 Classes Package<br>3-5 People/Group<br>Valid for 3 Months</p>
+                    <a href="checkout.html" class="add_button">Add to Bag</a>
+                </div>
+
+                <div class="plan_card">
+                    <div class="card_title">ADULT CLASS</div>
+                    <p class="plan_price"><sup>$</sup>480</p>
+                    <p class="plan_details">8 Classes Package<br>3-5 People/Group<br>Valid for 3 Months</p>
+                    <a href="checkout.html" class="add_button">Add to Bag</a>
+                </div>
+
+                <div class="plan_card">
+                    <div class="card_title">ADULT CLASS</div>
+                    <p class="plan_price"><sup>$</sup>95</p>
+                    <p class="plan_details">Single Class Package<br>1 on 1 Customized Class<br>By Appointment Only</p>
+                    <a href="checkout.html" class="add_button">Add to Bag</a>
+                </div>
+
+                <div class="plan_card">
+                    <div class="card_title">PRIVATE CLASS</div>
+                    <p class="plan_price"><sup>$</sup>420</p>
+                    <p class="plan_details">6 Classes Package<br>Juniors Only<br>Customized Lessons</p>
+                    <a href="checkout.html" class="add_button">Add to Bag</a>
+                </div>
+
+                <div class="plan_card">
+                    <div class="card_title">PRIVATE CLASS</div>
+                    <p class="plan_price"><sup>$</sup>540</p>
+                    <p class="plan_details">6 Classes Package<br>Adults Only<br>Customized Lessons </p>
+                    <a href="checkout.html" class="add_button">Add to Bag</a>
+                </div>
+
+                <div class="plan_card">
+                    <div class="card_title">SUMMER CAMP</div>
+                    <p class="plan_price"><sup>$</sup>850</p>
+                    <p class="plan_details">5 Day Weekly Package<br>6 People/Group<br>Check Schedule for Dates</p>
+                    <a href="checkout.html" class="add_button">Add to Bag</a>
+                </div>
+            </div>
+        </div>  
+        
+        <div class="schedule">
+            <h2>Weekly Schedule</h2>
+            <div class="schedule_table">
+                <button class="accordion">MONDAY</button>
+                <div class="panel">
+                    <p>Junior Class 16:30 - 18:30</p>
+                    <p>Adult Class 17:30 - 20:30</p>
+                    <p>Private Class 17:30 - 20:30</p>
+                </div>
+                <hr>
+                <button class="accordion">TUESDAY</button>
+                <div class="panel">
+                    <p>Junior Class 16:30 - 18:30</p>
+                    <p>Adult Class 17:30 - 20:30</p>
+            
+                </div>
+
+                <button class="accordion">WEDNESDAY</button>
+                <div class="panel">
+                    <p>Junior Class 16:30 - 18:30</p>
+                    <p>Adult Class 17:30 - 20:30</p>
+                    <p>Private Class 17:30 - 20:30</p>
+                </div>
+
+                <button class="accordion">THURSDAY</button>
+                <div class="panel">
+                    <p>Junior Class 16:30 - 18:30</p>
+                    <p>Adult Class 17:30 - 20:30</p>
+                    <p>Private Class 17:30 - 20:30</p>
+                </div>
+
+                <button class="accordion">FRIDAY</button>
+                <div class="panel">
+                    <p>Junior Class 16:30 - 18:30</p>
+                    <p>Adult Class 17:30 - 20:30</p>
+                </div>
+
+                <button class="accordion">SATURDAY</button>
+                <div class="panel">
+                    <p>Junior Class 10:30 - 12:30</p>
+                    <p>Junior Class 13:30 - 15:30</p>
+                    <p>Adult Class 9:30 - 12:30</p>
+                    <p>Adult Class 14:30 - 17:30</p>
+                    <p>Private Class 17:30 - 20:30</p>
+                </div>
+
+                <button class="accordion">SUNDAY</button>
+                <div class="panel">
+                    <p>Junior Class 10:30 - 12:30</p>
+                    <p>Junior Class 13:30 - 15:30</p>
+                    <p>Adult Class 9:30 - 12:30</p>
+                    <p>Adult Class 14:30 - 17:30</p>
+                    <p>Private Class 17:30 - 20:30</p>
+                </div>
+            </div>
+
+            <hr style="width: 75%; border-bottom: 2px solid #1F2831;">
+
+            <a href="account.html" class="button_action">Schedule Your Class</a>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+
+
+
+
+
+
+
+
+        <footer>
+            <div id="contact">
+                <p class="phone">CALL 408.564.6282</p>
+                <p class="address">223 Volley Way, Santa Clara, CA 95054</p>
+            </div>
+            <div id="connect">
+                    <a href="#" class="social">
+                    <img src="img/Icon_IG.svg" alt="IG"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_FB.svg" alt="FB"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_Email.svg" alt="Email"></a>
+            </div>
+            <div id="copyright">&copy;2015-2024 Ace Tennis Academy</div>
+        </footer>
+    </div>
+</body>
+</html>

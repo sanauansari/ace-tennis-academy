@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Tennis Academy: About</title>
+    <link rel="stylesheet" href="css/Team1_AceTennisAcademy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <style>
+        .heading_image{
+            background-image: url(img/Desktop_about_hero.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            margin-top: 120px;
+            background-size: cover;
+        }
+
+        .coaching_system{
+            background-color: #CEE865;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15rem;
+        }
+
+        h2{
+            padding-top: 3em;
+            padding-bottom: .5em;
+        }
+
+        .coaching_list{
+            align-self: center;
+            font-size: 50px;
+            font-weight: 600;
+            width: 57vw;
+            color: #1F2831;
+            line-height: 50px;
+            padding-left: 60px;
+        }
+
+        .coaching_list p{
+            font-size: 20px;
+            line-height: 25px;
+            font-weight: 500;
+        }
+
+        .coaching_list > ::marker {
+            content: url(img/Desktop_about_tennisball.svg)
+        }
+
+        .coaching_list > li{
+            padding: .5em;
+        }
+
+        .meet_coaches{
+            background-color: #1F2831;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15rem;
+        }
+
+        .meet_coaches h2{
+            color: #CCFF00;
+            padding-bottom: 6rem;
+        }
+
+        .coach_list{
+            width: 90vw;
+            display: grid;
+            grid-template-columns: 25% 25% 25%;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 10rem;
+            column-gap: 5rem;
+            justify-content: center;
+        }
+
+        .coach_profile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .coach_profile img{
+            width: 75%;
+            height: auto;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            margin-bottom: 3rem;
+        }
+
+        .coach_profile h3{
+            color: #CCFF00;
+            text-align: center;
+            font-weight: 500;
+            font-size: 35px;
+        }
+
+        .coach_profile p{
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 300;
+            color: #ffffff;
+            padding-top: 1rem;
+            padding-bottom: 4rem;
+        }
+
+        .coach_profile .button_action{
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            text-align: center;
+            color: #CCFF00;
+            border: 1.5px solid #CCFF00;
+            background-color: #1F2831;
+            padding: 15px 45px;
+            text-decoration: none;
+            cursor: pointer;
+            align-self: center;
+            border-radius: 50px;
+        }
+
+        .get_in_touch{
+            background-color: #d6d6d6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10rem;
+        }
+
+        .get_in_touch h2{
+            padding-bottom: 3rem;
+            text-align: center;
+            padding-top: 10rem;
+        }
+
+        .contact_content{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto auto;
+            gap: 20px;
+        }
+
+        .contact_inputs{
+            height: 8vh;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color:#1F2831;
+            border-radius: 10px;
+        }
+        
+        .contact_inputs_short{
+            width: 30vw;
+            height: 8vh;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color:#1F2831;
+            border-radius: 10px;
+        }
+
+        .contact_content textarea{
+            height: 40vh;
+            padding-top: 15px;
+            border-radius: 10px;
+        }
+
+        .contact_inputs:focus{
+            border: 2px solid #CCFF00;
+        }
+
+        .contact_inputs_short:focus{
+            border: 2px solid #CCFF00;
+        }
+
+        .contact_inputs::placeholder{
+            color:#d6d6d6;
+        }
+
+        .contact_inputs_short::placeholder{
+            color:#d6d6d6;
+        }
+
+        .contact_content button{
+            display: flex;
+            justify-content: center;
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #CCFF00;
+            gap: 10px;
+            border: none;
+            width: 15vw;
+            border-radius: 50px;
+            background: #1F2831;
+        }
+
+       @media(max-width: 430px){
+            header{
+                background-color: #6B6B6B;
+                display: block;
+                transition: top 0.3s;
+                z-index: 1;
+            }
+    
+            .heading_image{
+                background-image: url(img/Mobile_about_hero.jpg);
+                background-repeat: no-repeat;
+                background-position: top center;
+                margin-top: 100px;
+                background-size: cover;
+            }
+
+            .coaching_system{
+                background-color: #CEE865;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 4rem;
+            }
+
+            h2{
+                padding-top: 3rem;
+                padding-bottom: 2rem;
+                width: 80vw;
+            }
+
+            .coaching_list{
+                align-self: center;
+                font-size: 25px;
+                font-weight: 600;
+                width: 80vw;;
+                color: #1F2831;
+                line-height: 25px;
+                padding-left: 60px;
+            }
+
+            .coaching_list p{
+                font-size: 18px;
+                line-height: 18px;
+                font-weight: 500;
+            }
+
+            .coaching_list > ::marker {
+                content: url(img/Mobile_about_tennisball.svg)
+            }
+
+            .coaching_list > li{
+                padding: 0 .5em 1em .5em;
+            }         
+            
+            .meet_coaches{
+                background-color: #1F2831;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 6rem;
+            }
+
+            .meet_coaches h2{
+                color: #CCFF00;
+                padding-bottom: 4rem;
+            }
+
+            .coach_list{
+                width: 75vw;
+                display: flex;
+                flex-direction: column;
+                row-gap: 6rem;
+                justify-content: center;
+            }
+
+            .coach_profile{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+            .coach_profile p{
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 300;
+                color: #ffffff;
+                padding-top: 1rem;
+                padding-bottom: 2rem;
+            }
+
+            .get_in_touch{
+                padding-bottom:5rem;
+            }
+
+            .get_in_touch h2{
+                padding-bottom: 2rem;
+                text-align: center;
+                padding-top: 3rem;
+            }
+
+            .contact_content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact_inputs_short{
+                width: 80vw;
+                height: 6vh;
+                border: none;
+                outline: none;
+                padding-left: 25px;
+                font-weight: 500;
+                color:#1F2831;
+                border-radius: 10px;
+            }
+
+            .contact_inputs{
+                width: 80vw;
+                height: 6vh;
+                border: none;
+                outline: none;
+                padding-left: 25px;
+                font-weight: 500;
+                color:#1F2831;
+                border-radius: 10px;
+            }
+
+            .contact_content button{
+                display: flex;
+                justify-content: center;
+                padding: 15px 30px;
+                width: 60vw;
+                font-size: 20px;
+                color: #CCFF00;
+                margin-top: 10px;
+                border: none;
+                border-radius: 50px;
+                background: #1F2831;
+            }
+
+            .contact_content textarea{
+                height: 20vh;
+                padding-top: 15px;
+                border-radius: 10px;
+            }
+       }
+        
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <a href="index.html">
+                <img src="img/Desktop_logo.svg" id="logo_desktop" alt="ATA_Logo">
+            </a>
+            <a href="index.html">
+                <img src="img/Mobile_logo.svg" id="logo_mobile" alt="ATA_Logo">
+            </a>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar(); style="margin-top: 5em;"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M480-438 270-228q-9 9-21 9t-21-9q-9-9-9-21t9-21l210-210-210-210q-9-9-9-21t9-21q9-9 21-9t21 9l210 210 210-210q9-9 21-9t21 9q9 9 9 21t-9 21L522-480l210 210q9 9 9 21t-9 21q-9 9-21 9t-21-9L480-438Z"/></svg></a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="classes.html">CLASSES</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li style="padding-top: 30px;"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag" style="margin-right: 4px;"></a></li>
+                    <li style="padding-top: 50px;"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                </ul>
+                <ul class="mobilenav">
+                    <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+                    <li class="hideOnMobile"><a href="classes.html">CLASSES</a></li>
+                    <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+                    <li class="hideOnMobile"><a href="news.html">NEWS</a></li>
+                    <li class="hideOnMobile"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag"></a></li>
+                    <li class="hideOnMobile"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M150-240q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Z"/></svg></a></li>
+                </ul>
+            </nav>
+            
+            <script>
+                function showSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'flex'
+                }
+
+                function hideSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'none'
+                }
+            </script>
+
+            <script>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-150px";
+                }
+                prevScrollpos = currentScrollPos;
+                }
+            </script>
+
+            
+
+        </header>
+        <div class="heading">
+            <div class="heading_image"></div>
+            <div class="heading_text"> 
+                <h1>ABOUT</h1>
+                <p>
+                Ace Tennis Academy is your premier tennis destination in the heart of the San Francisco Bay Area. Our mission is to inspire a lifelong love of tennis by providing exceptional coaching, world-class facilities, and a supportive community.
+                <br>
+                <br>
+                Our goal is to help players of all ages and skill levels reach their full potential. Whether you're a budding tennis star or a recreational player, our experienced coaches will guide you on a journey of improvement and enjoyment. 
+                </p>
+            </div>
+        </div>
+
+        <div class="coaching_system">
+            <h2>Ace Coaching System</h2>
+            <ul class="coaching_list">
+                <li>PERSONALIZED INSTRUCTION<br>
+                    <p>Tailored coaching plans to meet your specific goals and learning style.</p></li>
+                <li>TECHNICAL MASTERY<br>
+                    <p>Expert guidance on stroke mechanics, footwork, and serve techniques.</p></li>
+                <li>STRATEGIC THINKING<BR>
+                    <P>Develop a winning game plan and outsmart your opponents.</P></li>
+                <li>MENTAL TOUGHNESS TRAINING<BR>
+                    <P>Earn to manage pressure, stay focused, and maintain a positive mindset.</P></li>
+            </ul>
+        </div>
+
+<!-- add code in the empty space here -->  
+
+        <div class="meet_coaches">
+            <h2>Meet Our Coaches</h2>
+            <div class="coach_list">
+                <div class="coach_profile">
+                    <img src="img/Desktop_about_photo_alex.png" alt="Alex Turner">
+                    <h3>Alex Turner</h3>
+                    <p>Former collegiate tennis player with a passion for nurturing young talent. Alex specializes in building confidence and a strong mental game.</p>
+                    <a href="coach_alex.html" target="_self" class="button_action">Read more here...</a>
+                </div>
+                <div class="coach_profile">
+                    <img src="img/Desktop_about_photo_tom.png" alt="Tom Pham">
+                    <h3>Tom Pham</h3>
+                    <p>A certified strength and conditioning coach. Tom combines tennis training with a personalized fitness regimen to optimize performance and minimize injury risk.</p>
+                    <a href="coach_tom.html" target="_self" class="button_action">Read more here...</a>
+                </div>
+                <div class="coach_profile">
+                    <img src="img/Desktop_about_photo_mia.png" alt="Mia Reyes">
+                    <h3>Mia Reyes</h3>
+                    <p>A former professional player, Mia brings years of experience to the court. She excels at helping players generate power and improve their stroke mechanics.</p>
+                    <a href="coach_mia.html" target="_self" class="button_action">Read more here...</a>
+                </div>
+                <div class="coach_profile">
+                    <img src="img/Desktop_about_photo_matt.png" alt="Matt Davis">
+                    <h3>Matt Davis</h3>
+                    <p>A former doubles specialist, Matthew brings a wealth of knowledge to the net. He helps players dominate at the net and improve their volleying skills.</p>
+                    <a href="coach_matt.html" target="_self" class="button_action">Read more here...</a>
+                </div>
+                <div class="coach_profile">
+                    <img src="img/Desktop_about_photo_emily.png" alt="Emily Walker">
+                    <h3>Emily Walker</h3>
+                    <p>A seasoned coach with a keen eye for strategy. Emily helps players develop a winning game plan and make smart decisions on the court.</p>
+                    <a href="coach_emily.html" target="_self" class="button_action">Read more here...</a>
+                </div>
+                <div class="coach_profile">
+                    <img src="img/Desktop_about_photo_ivan.png" alt="Ivan Chen">
+                    <h3>Ivan Chen</h3>
+                    <p>A former touring pro, Ivan excels at teaching players how to control the point from the baseline. He emphasizes consistency, depth, and spin.</p>
+                    <a href="coach_ivan.html" target="_self" class="button_action">Read more here...</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="get_in_touch">
+            <h2>Get in Touch with Us</h2>
+            
+                <form action="" class="contact_content">
+                    
+                        <input type="text" name="name" placeholder="Your Name" class="contact_inputs_short" required style="grid-column: 1/2; grid-row: 1/2;">
+                        <input type="email" name="email" placeholder="Your Email" class="contact_inputs_short" required style="grid-column: 2/3; grid-row: 1/2;">
+                        <input type="text" name="subject" placeholder="Subject" class="contact_inputs" required style="grid-column: 1/3; grid-row: 2/3;">
+                        <textarea name="message" placeholder="Your Message" class="contact_inputs" required style="grid-column: 1 / 3; grid-row: 3/4;"></textarea>
+                        <button type="submit"  style="justify-self: end;">Submit</button>
+                        <button type="reset">Clear</button>
+                    
+                </form>
+                
+            
+                     
+        </div>
+
+
+
+
+
+
+
+
+        <footer>
+            <div id="contact">
+                <p class="phone">CALL 408.564.6282</p>
+                <p class="address">223 Volley Way, Santa Clara, CA 95054</p>
+            </div>
+            <div id="connect">
+                    <a href="#" class="social">
+                    <img src="img/Icon_IG.svg" alt="IG"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_FB.svg" alt="FB"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_Email.svg" alt="Email"></a>
+            </div>
+            <div id="copyright">&copy;2015-2024 Ace Tennis Academy</div>
+        </footer>
+    </div>
+</body>
+</html>

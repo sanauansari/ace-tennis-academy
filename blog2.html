@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Tennis Academy: News | Blog</title>
+    <link rel="stylesheet" href="css/Team1_AceTennisAcademy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kite+One&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .heading {
+            background-image: url(img/Desktop_news_photo_blog2.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 100px;
+            text-align: left;
+            color: #CCFF00;
+        }
+
+        .blog_content {
+            background-color: #ffffff;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            padding-top: 5rem;
+        }
+
+        h4 {
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            line-height: 75px;
+            padding-bottom: 6rem;
+        }
+
+        .blog_body {
+            margin-bottom: 3rem;
+            width: 60vw;
+        }
+
+        .blog_body img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 25px;
+            margin-bottom: 2rem;
+        }
+
+        .return {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #1F2831;
+            border: 2px solid #1F2831;
+            padding: 10px 30px;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 50px;
+            width: fit-content;
+            margin-bottom: 6rem;
+        }
+
+        @media(max-width: 430px) {
+            header {
+                background-color: #6B6B6B;
+                display: block;
+                transition: top 0.3s;
+                z-index: 1;
+            }
+
+            .heading {
+                background-image: url(img/Mobile_blog2_hero.jpg);
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-attachment: scroll;
+                background-size: cover;
+                margin-top: 100px;
+                min-height: 50vh;
+            }
+
+            h1 {
+                font-size: 100px;
+                font-weight: 700;
+                line-height: 100px;
+                text-align: left;
+                color: #CCFF00;
+            }
+
+            .blog_content {
+                background-color: #ffffff;
+                width: 100vw;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                padding-top: 3rem;
+            }
+
+            h4 {
+                padding-bottom: 1rem;
+            }
+
+            h2 {
+                line-height: 50px;
+                text-align: left;
+                padding-bottom: 3rem;
+            }
+
+            .blog_body {
+                margin-bottom: 3rem;
+                width: 80vw;
+            }
+
+            .blog_body img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 20px;
+                margin-bottom: 2rem;
+            }
+
+            .return {
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-align: center;
+                color: #1F2831;
+                border: 2px solid #1F2831;
+                padding: 10px 30px;
+                text-decoration: none;
+                cursor: pointer;
+                border-radius: 50px;
+                width: fit-content;
+                margin-bottom: 3rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <a href="index.html">
+                <img src="img/Desktop_logo.svg" id="logo_desktop" alt="ATA_Logo">
+            </a>
+            <a href="index.html">
+                <img src="img/Mobile_logo.svg" id="logo_mobile" alt="ATA_Logo">
+            </a>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar(); style="margin-top: 5em;"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M480-438 270-228q-9 9-21 9t-21-9q-9-9-9-21t9-21l210-210-210-210q-9-9-9-21t9-21q9-9 21-9t21 9l210 210 210-210q9-9 21-9t21 9q9 9 9 21t-9 21L522-480l210 210q9 9 9 21t-9 21q-9 9-21 9t-21-9L480-438Z"/></svg></a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="classes.html">CLASSES</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li style="padding-top: 30px;"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag" style="margin-right: 4px;"></a></li>
+                    <li style="padding-top: 50px;"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                </ul>
+                <ul class="mobilenav">
+                    <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+                    <li class="hideOnMobile"><a href="classes.html">CLASSES</a></li>
+                    <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+                    <li class="hideOnMobile"><a href="news.html">NEWS</a></li>
+                    <li class="hideOnMobile"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag"></a></li>
+                    <li class="hideOnMobile"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M150-240q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Z"/></svg></a></li>
+                </ul>
+            </nav>
+            
+            <script>
+                function showSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'flex'
+                }
+
+                function hideSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'none'
+                }
+            </script>
+
+            <script>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-150px";
+                }
+                prevScrollpos = currentScrollPos;
+                }
+            </script>
+
+            
+
+        </header>
+        <div class="heading"></div>
+
+        <!-- add code in the empty space here -->
+        <div class="blog_content">
+            <div class="blog_body">
+                <h4>11/11/2024</h4>
+                <h2 class="blog_title">How We Build Out Our Training Facilities and Equipment, Enabled by Industry
+                    Pundits' Decades of Experiences
+                </h2>
+
+                <p>Creating the ideal training environment is crucial for player development. At Ace Tennis Academy, we've meticulously
+                    designed our facilities and selected top-tier equipment, drawing on decades of expertise from
+                    industry leaders. Our goal
+                    is simple: to provide a space where players can push their limits, hone their skills, and reach
+                    their full potential. We
+                    believe that every element of the training environment—whether it’s the court surface, the racquets,
+                    or the conditioning
+                    equipment—plays a pivotal role in enhancing performance. That’s why we’ve partnered with some of the
+                    most respected
+                    names in tennis and sports science to ensure our facilities are optimized for success.</p>
+
+                <img src="img/Desktop_blog2_photo1.jpg" class="card-img-top" alt="Courts News 2">
+
+                <p>From the surface of our courts to the weight of our racquets, every detail is meticulously considered
+                    to optimize player
+                    performance. The courts at Ace Tennis Academy are built using the latest technology and the
+                    highest-quality materials,
+                    ensuring the ideal balance of traction and speed. We offer a range of surfaces, including hard
+                    courts and clay, allowing
+                    players to experience and adapt to different playing conditions. Our racquets are hand-picked based
+                    on the latest
+                    industry trends and player needs, offering a mix of flexibility, power, and control. Whether it’s
+                    the string tension or
+                    the grip size, we ensure that every piece of equipment is tailored to suit the specific demands of
+                    the player, allowing
+                    for peak performance during training sessions and matches.</p>
+                <br>
+                <img src="img/Desktop_blog2_photo2.jpg" class="card-img-top" alt="Courts News 3">
+                <br>
+                <p>In addition to the physical training tools, we’ve invested heavily in cutting-edge fitness and
+                    recovery equipment,
+                    understanding that strength, conditioning, and recovery are just as important as technique. Our
+                    strength and
+                    conditioning area is equipped with state-of-the-art machines designed to enhance agility, power, and
+                    endurance. To
+                    support injury prevention and recovery, we also have cryotherapy units, massage chairs, and
+                    stretching areas to ensure
+                    our players can perform at their best day in and day out. Throughout the process of building and
+                    curating these
+                    resources, we’ve consulted with industry pundits and professionals who have decades of experience in
+                    tennis,
+                    biomechanics, and sports medicine. Their invaluable input has guided every decision, ensuring that
+                    our facilities and
+                    equipment meet the highest standards and provide our players with the best possible training
+                    environment.</p>
+            </div>
+            <a class="return" href="news.html" role="button">Return to the Ace Insight Blog</a>
+        </div>
+
+
+        <footer>
+            <div id="contact">
+                <p class="phone">CALL 408.564.6282</p>
+                <p class="address">223 Volley Way, Santa Clara, CA 95054</p>
+            </div>
+            <div id="connect">
+                <a href="#" class="social">
+                    <img src="img/Icon_IG.svg" alt="IG"></a>
+                <a href="#" class="social">
+                    <img src="img/Icon_FB.svg" alt="FB"></a>
+                <a href="#" class="social">
+                    <img src="img/Icon_Email.svg" alt="Email"></a>
+            </div>
+            <div id="copyright">&copy;2015-2024 Ace Tennis Academy</div>
+        </footer>
+    </div>
+</body>
+
+</html>

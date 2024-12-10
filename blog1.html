@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Tennis Academy: News | Blog</title>
+    <link rel="stylesheet" href="css/Team1_AceTennisAcademy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        .heading{
+            background-image: url(img/Desktop_news_photo_blog1.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        h1{
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 100px;
+            text-align: left;
+            color: #CCFF00;
+        }
+
+        .blog_content{
+            background-color: #ffffff;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            padding-top: 5rem;
+        }
+
+        h4{
+            padding-bottom: 1rem;
+        }
+
+        h2{
+            line-height: 75px;
+            padding-bottom: 6rem;
+        }
+
+        .blog_body{
+            margin-bottom: 3rem;
+            width: 60vw;
+        }
+
+        .blog_body img{
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        p{
+            font-size: 25px;
+            margin-bottom: 2rem;
+        }
+
+        .return{
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #1F2831;
+            border: 2px solid #1F2831;
+            padding: 10px 30px;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 50px;
+            width: fit-content;
+            margin-bottom: 6rem;
+        }
+        
+        @media(max-width: 430px){
+            header{
+                background-color: #6B6B6B;
+                display: block;
+                transition: top 0.3s;
+                z-index: 1;
+            }
+    
+            .heading{
+                background-image: url(img/Mobile_news_photo_blog1.jpg);
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-attachment: scroll;
+                background-size: cover;
+                margin-top: 100px;
+                min-height: 50vh;
+            }
+
+            h1{
+                font-size: 100px;
+                font-weight: 700;
+                line-height: 100px;
+                text-align: left;
+                color: #CCFF00;
+            }
+
+            .blog_content{
+                background-color: #ffffff;
+                width: 100vw;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                padding-top: 3rem;
+            }
+
+            h4{
+                padding-bottom: 1rem;
+            }
+
+            h2{
+                line-height: 50px;
+                text-align: left;
+                padding-bottom: 3rem;
+            }
+
+            .blog_body{
+                margin-bottom: 3rem;
+                width: 80vw;
+            }
+
+            .blog_body img{
+                width: 100%;
+                height: auto;
+                margin-bottom: 2rem;
+            }
+
+            p{
+                font-size: 20px;
+                margin-bottom: 2rem;
+            }
+
+            .return{
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-align: center;
+                color: #1F2831;
+                border: 2px solid #1F2831;
+                padding: 10px 30px;
+                text-decoration: none;
+                cursor: pointer;
+                border-radius: 50px;
+                width: fit-content;
+                margin-bottom: 3rem;
+            }
+            
+       }
+        
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <a href="index.html">
+                <img src="img/Desktop_logo.svg" id="logo_desktop" alt="ATA_Logo">
+            </a>
+            <a href="index.html">
+                <img src="img/Mobile_logo.svg" id="logo_mobile" alt="ATA_Logo">
+            </a>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar(); style="margin-top: 5em;"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M480-438 270-228q-9 9-21 9t-21-9q-9-9-9-21t9-21l210-210-210-210q-9-9-9-21t9-21q9-9 21-9t21 9l210 210 210-210q9-9 21-9t21 9q9 9 9 21t-9 21L522-480l210 210q9 9 9 21t-9 21q-9 9-21 9t-21-9L480-438Z"/></svg></a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="classes.html">CLASSES</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li style="padding-top: 30px;"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag" style="margin-right: 4px;"></a></li>
+                    <li style="padding-top: 50px;"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                </ul>
+                <ul class="mobilenav">
+                    <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+                    <li class="hideOnMobile"><a href="classes.html">CLASSES</a></li>
+                    <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
+                    <li class="hideOnMobile"><a href="news.html">NEWS</a></li>
+                    <li class="hideOnMobile"><a href="checkout.html"><img src="img/Icon_shopping_bag.svg" alt="shopping bag"></a></li>
+                    <li class="hideOnMobile"><a href="account.html"><img src="img/Icon_account.svg" alt="my account"></a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#CCFF00"><path d="M150-240q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Zm0-210q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h660q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H150Z"/></svg></a></li>
+                </ul>
+            </nav>
+            
+            <script>
+                function showSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'flex'
+                }
+
+                function hideSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'none'
+                }
+            </script>
+
+            <script>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-150px";
+                }
+                prevScrollpos = currentScrollPos;
+                }
+            </script>
+
+            
+
+        </header>
+        <div class="heading"></div>
+
+<!-- add code in the empty space here -->  
+    <div class="blog_content">
+        <div class="blog_body">
+            <h4>11/4/2024</h4>
+            <h2 class="blog_title">Herbert Young, the Road to Become an All-around Player via Systemic Training
+            </h2>
+            
+            <p>Herbert Young's journey from a raw talent to a well-rounded tennis player is a testament to the power of structured training. When Herbert first came to Ace Tennis Academy, his natural athleticism was evident, but his skills were largely unrefined. He had an explosive forehand and raw potential, but lacked the consistency and mental toughness needed to excel at higher levels. Under the expert guidance of the academy's coaches, Herbert was introduced to a holistic training program that targeted every aspect of his game—technical, physical, and mental. Through Ace's systemic approach, he was able to develop a deep understanding of his own strengths and areas for improvement, ultimately transforming into a much more complete player.</p>
+            
+            <img src="img/Desktop_blog1_photo1.jpg" class="card-img-top" alt="Herbert News 2">
+            
+            <p>One of the key elements of Herbert's development was Ace Tennis Academy's emphasis on a
+                well-rounded game. Rather than focusing solely on specific shots or short-term results,
+                the academy coaches stressed
+                the importance of versatility—being able to dominate from the baseline, execute at the
+                net, and maintain a
+                mental edge throughout each match. Through tailored training sessions that incorporated
+                everything from serve
+                technique and groundstrokes to strategic match play and fitness, Herbert became adept at
+                controlling rallies from both
+                the baseline and at the net. His once erratic play now had a sense of purpose, with each
+                shot executed with more precision and intention. Ace's training
+                regimen was designed to make Herbert not just a powerful hitter, but a smart, adaptable
+                player who could handle a variety of opponents and match situations.</p>
+            <br>
+            <img src="img/Desktop_blog1_photo2.jpg" class="card-img-top" alt="Herbert News 3">
+            <br>
+            <p>Beyond the physical and technical aspects, one of the most significant changes in
+                Herbert's development was in his mental game. Ace Tennis Academy places a strong
+                emphasis on mental toughness, teaching
+                players how to stay calm under pressure, bounce back from mistakes, and maintain focus
+                throughout a match. Herbert learned how to think critically on the court, adjusting his
+                game plan based on his opponent's weaknesses and playing to his
+                own strengths. His ability to read the game and make smart decisions in key moments
+                allowed him to navigate tight matches with confidence. Today, Herbert is a well-rounded
+                player, not just because of his refined techniques, but because of his ability to
+                compete with mental clarity and resilience, embodying the full spectrum of skills that
+                Ace's systemic
+                training provides.</p>
+        </div>
+        <a class="return" href="news.html" role="button">Return to the Ace Insight Blog</a>
+    </div>
+
+        
+        <footer>
+            <div id="contact">
+                <p class="phone">CALL 408.564.6282</p>
+                <p class="address">223 Volley Way, Santa Clara, CA 95054</p>
+            </div>
+            <div id="connect">
+                    <a href="#" class="social">
+                    <img src="img/Icon_IG.svg" alt="IG"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_FB.svg" alt="FB"></a>
+                    <a href="#" class="social">
+                    <img src="img/Icon_Email.svg" alt="Email"></a>
+            </div>
+            <div id="copyright">&copy;2015-2024 Ace Tennis Academy</div>
+        </footer>
+    </div>
+</body>
+</html>
